@@ -1,0 +1,23 @@
+{
+  "name": "omics_data_analysis_genomics",
+  "private": false,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "eject": "slidev theme eject",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.36.5",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "party-js": "^2.2.0",
+    "sass": "^1.69.5",
+    "slidev-theme-penguin": "^1.4.1",
+    "vite-svg-loader": "^5.1.0",
+    "vue-video-player": "^6.0.0"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.16"
+  }
+}

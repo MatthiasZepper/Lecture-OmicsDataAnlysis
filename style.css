@@ -1,0 +1,41 @@
+:root {
+    --ngiBlue:#007bff;
+    --ngiDarkBlue:#0056b3;
+    --ngiLightBlue:#e7ecf7;
+    --ngiLGray:#e5e5e5;
+    --ngiMGray:#A6CBCF;
+    --ngiDGray:#212529;
+    --ngiBlack:#183c55;
+}
+
+.vidcontent {
+    position: relative;
+    margin: 0 auto;
+}
+
+.vidcontent video {
+    width: 100%;
+    display: block;
+}
+
+.vidcontent span {
+    content: '';
+    position: absolute;
+    top: 65%;
+    right: 0;
+    bottom: 0;
+    left: 5%;
+    font-size: 50pt;
+    background-color: var(--ngiBlue);
+    background-image: linear-gradient(45deg, var(--ngiMGray) 10%, var(--ngiBlue) 50%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.time {
+    color: var(--ngiDarkBlue);
+    background-color: var(--ngiLightBlue);
+}
