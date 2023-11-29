@@ -47,7 +47,8 @@ layout: center
 
 ---
 layout: text-image
-media: '/assets/fun/excel.png'
+media: '/assets/fun/phd021315s.gif'
+caption: 'https://phdcomics.com/comics/archive.php?comicid=1780'
 ---
 
 # Bioinformatician
@@ -70,7 +71,7 @@ caption: 'https://doi.org/10.1186/s13059-016-1044-7'
 # Use suitable tools
 
 <a href="https://www.nature.com/articles/s41588-020-0669-3">
-<img src="/assets/tools/excel/renamedgenes.png" alt="Gene renaming." />
+<img src="/assets/tools/excel/renamedgenes.png" alt="Gene renaming by HGNC." />
 </a>
 
 In 2020, _Human Genome Gene Nomenclature Committee (HGNC)_ renamed genes that were auto-converted to dates in Excel.
@@ -83,13 +84,26 @@ caption: 'https://gizmodo.com/microsoft-fixes-excel-feature-that-forced-scientis
 
 # Use suitable tools
 
+
+<div class="mx-auto my-auto">
+  <img src="/assets/fun/excel.png" class="rounded-full w-80 mx-auto"/>
+</div>
+
 ---
 layout: text-window
 ---
 
-# Consoles
+# Use suitable tools
 
-Use code snippets and get the highlighting directly into a nice looking window!
+- They might not have a GUI.
+- They might not run on your machine.
+- For remote compute, mind data privacy!
+
+# Use a suitable OS
+
+- GNU / Linux
+- MacOS
+- Windows Subsystem for Linux
 
 ::window::
 
@@ -100,15 +114,19 @@ _   _ ____  ____  __  __    _    __  __
 | |_| |  __/|  __/| |  | |/ ___ \  /  \    |
  \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   |
 
-###############################################################################
+########################################################################
 
-        User Guides: http://www.uppmax.uu.se/support/user-guides
-        FAQ: http://www.uppmax.uu.se/support/faq
+  User Guides: http://www.uppmax.uu.se/support/user-guides
+  FAQ: http://www.uppmax.uu.se/support/faq
 
-        Write to support@uppmax.uu.se, if you have questions or comments.
+  Write to support@uppmax.uu.se, if you have questions or comments.
 
 
 (base) [bioinfomagician@rackham3 ~]$
+
+
+
+
 ```
 
 ---
@@ -138,6 +156,48 @@ layout: new-section
 <div>
   <p class="text-lg text-gray-500 font-semibold text-center">Julia</p>
 </div>
+</div>
+
+---
+layout: new-section
+---
+
+# Bioinformatic ecosystem
+
+<div class="grid grid-cols-4 grid-rows-2 grid-flow-row-dense">
+
+<div class="mx-auto my-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">git (version control)</p>
+</div>
+<div class="mx-auto my-auto">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">Jupyter, Quarto (Notebooks)</p>
+</div>
+<div class="mx-auto my-auto">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Snakemake_logo_dark.png" class="rounded-full w-30 mx-auto"/>
+   <img src="https://raw.githubusercontent.com/seqeralabs/logos/master/nextflow/nextflow_logo_color.svg" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">Snakemake, Nextflow (Workflows)</p>
+</div>
+<div class="mx-auto my-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/480px-Docker-svgrepo-com.svg.png" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">Docker, Apptainer (containers)</p>
+</div>
+
+<div class="mx-auto my-auto">
+   <img src="https://bioconda.github.io/_images/bioconda.png" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">Bioconda (package manager)</p>
+</div>
+
+<div class="mx-auto my-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Bioconductor_logo_rgb.jpg" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">Bioconductor, Tidyverse (R packages)</p>
+</div>
+<div class="mx-auto my-auto col-span-2">
+   <img src="https://arrow.apache.org/img/arrow.png" class="rounded-full w-30 mx-auto"/>
+   <p class="text-lg text-gray-500 font-semibold text-center">BioNumPy, Pandas, Polar.rs, Apache Arrow, DuckDB (Analytics)</p>
+</div>
+
 </div>
 
 ---
