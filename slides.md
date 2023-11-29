@@ -158,6 +158,36 @@ layout: new-section
 </div>
 </div>
 
+
+---
+layout: new-section
+---
+
+# Programming languages for tools
+
+<div class="grid grid-cols-3 gap-1 py-4">
+
+<div class="mx-auto">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto my-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">C++</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Go</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Rust</p>
+</div>
+</div>
+
 ---
 layout: new-section
 ---
@@ -204,27 +234,66 @@ layout: new-section
 layout: new-section
 ---
 
-# Programming languages for tools
+# The most important tools
 
-<div class="grid grid-cols-3 gap-1 py-4">
+<div class="grid grid-cols-2 gap-1 py-4">
 
 <div class="mx-auto">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" class="rounded-full w-50 mx-auto"/>
-</div>
-<div class="mx-auto my-auto">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" class="rounded-full w-50 mx-auto"/>
+  <img src="/assets/tools/books/alberts.jpg" class="rounded-full w-50 mx-auto"/>
 </div>
 <div class="mx-auto">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" class="rounded-full w-50 mx-auto"/>
+  <img src="/assets/tools/books/hastie.png" class="rounded-full w-50 mx-auto"/>
 </div>
 
 <div>
-  <p class="text-lg text-gray-500 font-semibold text-center">C++</p>
+  <p class="text-lg text-gray-500 font-semibold text-center">Biological understanding</p>
 </div>
 <div>
-  <p class="text-lg text-gray-500 font-semibold text-center">Go</p>
-</div>
-<div>
-  <p class="text-lg text-gray-500 font-semibold text-center">Rust</p>
+  <p class="text-lg text-gray-500 font-semibold text-center">Statistical knowledge</p>
+  <a href="https://hastie.su.domains/ElemStatLearn/printings/ESLII_print12.pdf">(free fulltext)</a>
 </div>
 </div>
+
+
+---
+layout: new-section
+---
+
+# Syntax errors are easy to debug
+
+<div class="mx-auto">
+  <img src="/assets/tools/issues/syntaxerror.png" class="rounded-full w-200"/>
+</div>
+
+
+# but it frequently happens that 
+# tools output _something_ arbitrarily.
+
+---
+layout: text-image
+media: '/assets/tools/issues/PIIS1934590923002886.png'
+caption: 'https://doi.org/10.1016/j.stem.2023.08.005'
+---
+
+# Understand the methods you apply
+
+Example from [j.stem.2023.08.005](https://doi.org/10.1016/j.stem.2023.08.005):
+
+- Findings backed by wet lab results.
+- Distances in 2D projections of UMAP / t-SNE are not directly interpretable.
+- Their loss functions are invariant with respect to rotations.
+- More details at [Understanding UMAP](https://pair-code.github.io/understanding-umap/)
+
+
+---
+layout: text-image
+media: '/assets/tools/issues/s41586-020-2095-1.png'
+---
+
+# Understand the methods you apply
+
+Example from [10.1038/s41586-020-2095-1](https://www.nature.com/articles/s41586-020-2095-1):
+
+- In this case, both the analysis strategy and the understanding of the used methods was inadequate.
+- Overconfident broad generalization of the findings.
+- More details at [10.1128/mbio.01607-23](https://journals.asm.org/doi/10.1128/mbio.01607-23)
