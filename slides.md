@@ -18,11 +18,15 @@ themeConfig:
     /assets/ngilogo.png
   eventUrl: https://ngisweden.scilifelab.se/
 ---
+<div class="mx-auto my-auto w-120">
 
 # Analyzing genomic data
 
 From data to insight (hopefully)
 
+  <img src="/assets/repo.png" class="rounded-full w-30 mx-auto"/>
+</div>
+https://github.com/MatthiasZepper/Lecture-OmicsDataAnlysis
 ---
 layout: presenter
 presenterImage: '/assets/people/matthias.jpg'
@@ -74,7 +78,7 @@ media: '/assets/tools/excel/nameerrors.png'
 caption: 'https://doi.org/10.1186/s13059-016-1044-7'
 ---
 
-# Use suitable tools
+# What I don't use
 
 <a href="https://www.nature.com/articles/s41588-020-0669-3">
 <img src="/assets/tools/excel/renamedgenes.png" alt="Gene renaming by HGNC." />
@@ -88,7 +92,7 @@ media: '/assets/tools/excel/conversionoptional.png'
 caption: 'https://gizmodo.com/microsoft-fixes-excel-feature-that-forced-scientists-to-1850949443'
 ---
 
-# Use suitable tools
+# What I don't use
 
 
 <div class="mx-auto my-auto">
@@ -343,7 +347,7 @@ layout: new-section
 <div class="w-160 m-auto" style="justify-content: left; text-align: left;">
 
 - Plain text format
-- Each read is represented by for consecutive lines:
+- Each read is represented by four consecutive lines:
   1. Sequence identifier and an optional description
   2. The sequence
   3. &#43; (optional) 
@@ -362,16 +366,139 @@ F#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFF
 layout: two-cols-header
 ---
 
-# Quality control
+# Quality control: Good sequencing quality
 
 ::left::
 
-# Left
 
-This shows on the left
+ <img src="/assets/bio/fastqc-good.png" class="rounded-full w-100 mx-auto"/>
+
+Base call quality is high along the full read
 
 ::right::
 
-# Right
+ <img src="/assets/bio/fastqc-good2.png" class="rounded-full w-100 mx-auto"/>
 
-This shows on the right
+The base composition is balanced
+
+
+
+---
+layout: two-cols-header
+---
+
+# Quality control: Poor sequencing quality
+
+::left::
+
+
+ <img src="/assets/bio/fastqc-ugly.png" class="rounded-full w-100 mx-auto"/>
+
+Base call quality drops off dramatically
+
+::right::
+
+ <img src="/assets/bio/fastqc-ugly2.png" class="rounded-full w-100 mx-auto"/>
+
+The base composition is heavily skewed
+
+
+---
+layout: text-window
+---
+
+# Common tasks
+
+### (pairwise) Alignment
+
+Find the exact origin of a short fragment in a long reference
+
+### Quasi-mapping
+
+Which reference is the most-likely origin?
+
+### De-novo assembly
+
+Create a long reference from short fragments
+
+::window::
+
+```
+>NC_001422.1 Escherichia phage phiX174
+GAGTTTTATCGCTTCCATGACGCAGAAGTTAACACTTTCGGATATTTCTGATGAGTCGAAAAATTATCTT
+GATAAAGCAGGAATTACTACTGCTTGTTTACGAATTAAATCGAAGTGGACTGCTGGCGGAAAATGAGAAA
+ATTCGACCTATCCTTGCGCAGCTCGAGAAGCTCTTACTTTGCGACCTTTCGCCATCAACTAACGATTCTG
+TCAAAAACTGACGCGTTGGATGAGGAGAAGTGGCTTAATATGCTTGGCACGTTCGTCAAGGACTGGTTTA
+GATATGAGTCACATTTTGTTCATGGTAGAGATTCTCTTGTTGACATTTTAAAAGAGCGTGGATTACTATC
+TGAGTCCGATGCTGTTCAACCACTAATAGGTAAGAAATCATGAGTCAAGTTACTGAACAATCCGTACGTT
+TCCAGACCGCTTTGGCCTCTATTAAGCTCATTCAGGCTTCTGCCGTTTTGGATTTAACCGAAGATGATTT
+CGATTTTCTGACGAGTAACAAAGTTTGGATTGCTACTGACCGCTCTCGTGCTCGTCGCTGCGTTGAGGCT
+TGCGTTTATGGTACGCTGGACTTTGTGGGATACCCTCGCTTTCCTGCTCCTGTTGAGTTTATTGCTGCCG
+TCATTGCTTATTATGTTCATCCCGTCAACATTCAAACGGCCTGTCTCATCATGGAAGGCGCTGAATTTAC
+GGAAAACATTATTAATGGCGTCGAGCGTCCGGTTAAAGCCGCTGAATTGTTCGCGTTTACCTTGCGTGTA
+CGCGCAGGAAACACTGACGTTCTTACTGACGCAGAAGAAAACGTGCGTCAAAAATTACGTGCGGAAGGAG
+TGATGTAATGTCTAAAGGTAAAAAACGTTCTGGCGCTCGCCCTGGTCGTCCGCAGCCGTTGCGAGGTACT
+AAAGGCAAGCGTAAAGGCGCTCGTCTTTGGTATGTAGGTGGTCAACAATTTTAATTGCAGGGGCTTCGGC
+CCCTTACTTGAGGATAAATTATGTCTAATATTCAAACTGGCGCCGAGCGTATGCCGCATGACCTTTCCCA
+TCTTGGCTTCCTTGCTGGTCAGATTGGTCGTCTTATTACCATTTCAACTACTCCGGTTATCGCTGGCGAC
+TCCTTCGAGATGGACGCCGTTGGCGCTCTCCGTCTTTCTCCATTGCGTCGTGGCCTTGCTATTGACTCTA
+CTGTAGACATTTTTACTTTTTATGTCCCTCATCGTCACGTTTATGGTGAACAGTGGATTAAGTTCATGAA
+GGATGGTGTTAATGCCACTCCTCTCCCGACTGTTAACACTACTGGTTATATTGACCATGCCGCTTTTCTT
+GGCACGATTAACCCTGATACCAATAAAATCCCTAAGCATTTGTTTCAGGGTTATTTGAATATCTATAACA
+ACTATTTTAAAGCGCCGTGGATGCCTGACCGTACCGAGGCTAACCCTAATGAGCTTAATCAAGATGATGC
+TCGTTATGGTTTCCGTTGCTGCCATCTCAAAAACATTTGGACTGCTCCGCTTCCTCCTGAGACTGAGCTT
+[...]
+```
+
+
+---
+layout: text-window
+---
+
+# 🎄🎶❄️  mode on...
+
+### Pairwise alignment
+
+- Unique:  <span class="read">ng spirits brig</span><span class="read">ghing all the w</span>
+- Multi-mapper: <span class="read">Jingle bel</span>
+- Base error: <span class="read">what pun it is</span>
+- Indels: <span class="read">Jinggggle bel</span>
+
+### Quasi-mapping
+
+- Within scaffold: <span class="read">Bells on bob tail</span> <span class="read">open sleigh. Hey!</span> 
+- Within reference: <span class="read">Sankta Lucia</span>
+
+
+::window::
+
+```
+
+Dashing through the snow
+In a one-horse open sleigh
+O'er the fields we go
+Laughing all the way
+Bells on bob tail ring
+Making spirits bright
+What fun it is to ride and sing
+A sleighing song tonight! Oh!
+
+Jingle bells, jingle bells,
+Jingle all the way.
+Oh! what fun it is to ride
+In a one-horse open sleigh. Hey!
+
+Jingle bells, jingle bells,
+Jingle all the way;
+Oh! what fun it is to ride
+In a one-horse open sleigh.
+
+```
+
+
+---
+layout: intro
+---
+
+# Workflow managers
+

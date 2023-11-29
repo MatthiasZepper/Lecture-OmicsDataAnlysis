@@ -39,3 +39,8 @@
     color: var(--ngiDarkBlue);
     background-color: var(--ngiLightBlue);
 }
+
+.read {
+    color: var(--shiki-color-text);
+    background-color: var(--shiki-color-background);
+}
