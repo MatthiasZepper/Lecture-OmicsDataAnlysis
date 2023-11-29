@@ -62,6 +62,12 @@ caption: 'https://phdcomics.com/comics/archive.php?comicid=1780'
 ## Workflows
 
 ---
+layout: intro
+---
+
+# Toolbox peek
+
+---
 layout: text-image
 reverse: true
 media: '/assets/tools/excel/nameerrors.png'
@@ -297,3 +303,75 @@ Example from [10.1038/s41586-020-2095-1](https://www.nature.com/articles/s41586-
 - In this case, both the analysis strategy and the understanding of the used methods was inadequate.
 - Overconfident broad generalization of the findings.
 - More details at [10.1128/mbio.01607-23](https://journals.asm.org/doi/10.1128/mbio.01607-23)
+
+---
+layout: intro
+---
+
+# Common genomic data formats
+
+
+---
+layout: new-section
+---
+
+# FastQ: Format for sequencing reads
+
+<div class="grid grid-cols-4 gap-1 py-4">
+
+<div class="mx-auto my-auto">
+  <img src="/assets/bio/dnabackbone2.png" class="rounded-full w-20 mx-auto"/>
+</div>
+<div class="mx-auto">
+  <img src="https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/genome-sequencer-8.svg" class="rounded-full w-50 mx-auto" alt="genome-sequencer-8 icon by DBCLS https://togotv.dbcls.jp/en/pics.html is licensed under CC-BY 4.0 Unported https://creativecommons.org/licenses/by/4.0/"/>
+  <img src="https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/DNA_sequencer.svg" class="rounded-full w-35 mx-auto" alt="DNA_sequencer icon by DBCLS https://togotv.dbcls.jp/en/pics.html is licensed under CC-BY 4.0 Unported https://creativecommons.org/licenses/by/4.0/"/>
+  <img src="https://bioicons.com/icons/cc-0/Genetics/PacBio/img_sequencers01.svg" class="rounded-full w-40 mx-auto" alt="img_sequencers01 icon by PacBio https://pacb.com is licensed under CC0 https://creativecommons.org/publicdomain/zero/1.0/"/>
+</div>
+
+<div class="mx-auto col-span-2">
+  <img src="https://bioicons.com/icons/cc-0/General_items/OpenClipart/Document.svg" class="rounded-full w-40 mx-auto" alt="Document icon by OpenClipart https://openclipart.org/ is licensed under CC0 https://creativecommons.org/publicdomain/zero/1.0/"/>
+  <p class="text-lg text-gray-500 font-semibold text-center">FastQ</p>
+</div>
+</div>
+
+---
+layout: new-section
+---
+
+# FastQ: Format for sequencing reads
+
+<div class="w-160 m-auto" style="justify-content: left; text-align: left;">
+
+- Plain text format
+- Each read is represented by for consecutive lines:
+  1. Sequence identifier and an optional description
+  2. The sequence
+  3. &#43; (optional) 
+  4. The base call quality
+
+```
+@SCILIFELAB:500:NGISTLM:1:1101:32832:1016 1:N:0:GCTTCAGGGT+AAGGTAGCGT
+TCCCCCAACTTGATATTAATAACACTATAGACCACCGCCCCGAAGGGGACGAAAAATGGTTTTTAGAGAACGAGAAGACGGTTACGCAG
++
+F#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFF
+```
+
+</div>
+
+---
+layout: two-cols-header
+---
+
+# Quality control
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
