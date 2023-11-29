@@ -12,13 +12,14 @@ drawings:
   persist: false
 css: unocss
 themeConfig:
+  primary: '#5d8392'
   logoHeader: /assets/scilifelab.png
   eventLogo: >-
     /assets/ngilogo.png
   eventUrl: https://ngisweden.scilifelab.se/
 ---
 
-# Analyzing genomics data
+# Analyzing genomic data
 
 From data to insight (hopefully)
 
@@ -31,7 +32,7 @@ presenterImage: '/assets/people/matthias.jpg'
 
 - Life and Medical Sciences in Bonn 🇩🇪
 - PhD in leukemia epigenetics in Münster 🇩🇪
-- Founder of start-up [Nucleotidy](http://nucleotidy.bio)
+- Founder (& liquidator) of start-up [Nucleotidy](http://nucleotidy.bio)
   <div class="rounded-md overflow-hidden" w="40%" style="background-color: #073a4d; padding: 1em">
   <img src="https://raw.githubusercontent.com/nucleotidy/nucleotidy-landing/main/src/assets/images/logos/nucleotidyweblogo.svg" alt="Nucleotidy logo" />
   </div>
@@ -47,7 +48,6 @@ layout: center
 ---
 layout: text-image
 media: '/assets/fun/excel.png'
-caption: 'Choose the right tool...'
 ---
 
 # Bioinformatician
@@ -59,3 +59,112 @@ caption: 'Choose the right tool...'
 ## Exemplary analyses
 
 ## Workflows
+
+---
+layout: text-image
+reverse: true
+media: '/assets/tools/excel/nameerrors.png'
+caption: 'https://doi.org/10.1186/s13059-016-1044-7'
+---
+
+# Use suitable tools
+
+<a href="https://www.nature.com/articles/s41588-020-0669-3">
+<img src="/assets/tools/excel/renamedgenes.png" alt="Gene renaming." />
+</a>
+
+In 2020, _Human Genome Gene Nomenclature Committee (HGNC)_ renamed genes that were auto-converted to dates in Excel.
+
+---
+layout: text-image
+media: '/assets/tools/excel/conversionoptional.png'
+caption: 'https://gizmodo.com/microsoft-fixes-excel-feature-that-forced-scientists-to-1850949443'
+---
+
+# Use suitable tools
+
+---
+layout: text-window
+---
+
+# Consoles
+
+Use code snippets and get the highlighting directly into a nice looking window!
+
+::window::
+
+```
+_   _ ____  ____  __  __    _    __  __
+| | | |  _ \|  _ \|  \/  |  / \   \ \/ /   | System:    rackham3
+| | | | |_) | |_) | |\/| | / _ \   \  /    | User:      bioinfomagician
+| |_| |  __/|  __/| |  | |/ ___ \  /  \    |
+ \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   |
+
+###############################################################################
+
+        User Guides: http://www.uppmax.uu.se/support/user-guides
+        FAQ: http://www.uppmax.uu.se/support/faq
+
+        Write to support@uppmax.uu.se, if you have questions or comments.
+
+
+(base) [bioinfomagician@rackham3 ~]$
+```
+
+---
+layout: new-section
+---
+
+# Programming languages for data exploration
+
+<div class="grid grid-cols-3 gap-1 py-4">
+
+<div class="mx-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/620px-R_logo.svg.png" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Python</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">R</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Julia</p>
+</div>
+</div>
+
+---
+layout: new-section
+---
+
+# Programming languages for tools
+
+<div class="grid grid-cols-3 gap-1 py-4">
+
+<div class="mx-auto">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto my-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+<div class="mx-auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" class="rounded-full w-50 mx-auto"/>
+</div>
+
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">C++</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Go</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Rust</p>
+</div>
+</div>

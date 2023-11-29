@@ -5,7 +5,7 @@
         <slot name="default" />
       </div>
       <div class="relative">
-        <TheConsole class="rounded-lg shadow-lg object-cover z-10">
+        <TheConsole class="rounded-lg shadow-lg object-cover z-10" style="background: #2e2e2e" >
           <slot name="window"></slot>
         </TheConsole>
       </div>
