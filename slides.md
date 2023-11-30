@@ -523,6 +523,19 @@ SRR2057595.3828487_CGCCG	16	chr19	3486359	255	63M	*	0	0	*	*	XA:i:0	MD:Z:63	NM:i:
 </div>
 
 ---
+layout: new-section
+---
+
+# Genome browsers for viewing
+
+<div class="w-160 m-auto" style="justify-content: left; text-align: left;">
+   <a href="https://github.com/kcleal/gw">
+  <img src="/assets/bio/gw/gwscreenshot2.png" class="rounded-full w-160 mx-auto my-auto"/>
+  </a>
+</div>
+Agglomerated errors may represent individual variations (mind the ploidy)
+
+---
 layout: intro
 ---
 
@@ -583,7 +596,7 @@ layout: text-window
 
 :: window ::
 
-```Groovy
+```
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2 
 
@@ -644,5 +657,7 @@ Honorable mention: [Reflow](https://github.com/grailbio/reflow), [Workflow Descr
 layout: new-section
 ---
 
-# Test
+# Workflow "philosophies"
+
+
 
