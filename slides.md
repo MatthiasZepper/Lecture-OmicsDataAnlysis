@@ -821,3 +821,53 @@ layout: new-section
   </ul>
 </div>
 </div>
+
+
+---
+layout: iframe-right
+url: https://nf-co.re/pipelines
+class: text-sm
+---
+
+<img src="https://avatars.githubusercontent.com/u/35520196?s=200&v=4" class="rounded-full w-30 mx-auto"/>
+
+ <a href="https://www.nf-co.re"><h3>nf-core</h3></a>
+  <ul>
+    <li>Bioinformatic workflow community</li>
+    <li>Nextflow pipelines</li>
+    <li>93 public pipelines</li>
+    <li>More than 1ooo modules</li>
+    <li>A friendly Slack space for questions</li>
+    <li>Watch <fancy-link href="https://www.youtube.com/watch?v=2hEYtrGXrKo">Beginner's guide to nf-core</fancy-link></li>
+  </ul>
+
+---
+layout: iframe-right
+url: https://anvio.org
+class: text-sm
+---
+
+<a href="https://www.nature.com/articles/s41564-020-00834-3"><img src="https://anvio.org/images/anvio.png" class="rounded-full w-50 mx-auto"/></a>
+
+ <a href="https://anvio.org/network/"><h3>Anvi’o</h3></a>
+  <ul>
+    <li>Microbial omic's community</li>
+    <li>Build on top of Snakemake</li>
+    <a href="https://www.nature.com/articles/s41586-023-05962-4"><li>Reproducible exploratory analyses with artifacts and workflows</li></a>
+    <a href="https://anvio.org/help/7/artifacts/interactive/"><li>Publish figures with provenance</li></a>
+    <li>A friendly Discord space for questions</li>
+    <li>Watch <fancy-link href="https://www.youtube.com/watch?v=MqD4aN1p1qA&t=344s">a video tutorial.</fancy-link></li>
+  </ul>
+
+---
+layout: new-section
+---
+
+# UAG (stop)
+
+<div class="w-160 m-auto" style="justify-content: left; text-align: left;">
+   <a href="https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu">
+  <img src="/assets/fun/googlesource.png" class="rounded-full w-160 mx-auto my-auto"/>
+  </a>
+</div>
+https://github.com/MatthiasZepper/Lecture-OmicsDataAnlysis
