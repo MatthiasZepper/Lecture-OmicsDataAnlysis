@@ -462,7 +462,7 @@ layout: text-window
 - Unique:  <span class="read">ng spirits brig</span><span class="read">ghing all the w</span>
 - Multi-mapper: <span class="read">Jingle bel</span>
 - Base error: <span class="read">what pun it is</span>
-- Indels: <span class="read">Jinggggle bel</span>
+- Indels: <span class="read">Jingggge bls</span>
 
 ### Quasi-mapping
 
@@ -495,10 +495,154 @@ In a one-horse open sleigh.
 
 ```
 
+---
+layout: new-section
+---
+
+# SAM/BAM/CRAM: Format for pairwise alignments
+
+<div class="w-160 m-auto" style="justify-content: left; text-align: left;">
+
+- Plain text format (SAM)
+- Binary & compressed format (BAM/CRAM)
+- Contains a header with metadata about reference and aligner
+- Prints one alignment per line
+- May contain secondary alignments
+```
+@HD	VN:1.0	SO:coordinate
+@SQ	SN:chr1	LN:197195432
+[...]
+@PG	ID:Bowtie	VN:1.1.2	CL:"bowtie --wrapper basic-0 --threads 4 -v 2 -m 10 -a /ifs/mirror/genomes/bowtie/mm9 /dev/fd/63 --sam"
+[...]
+SRR2057595.665063_CGCCG	16	chr19	3486359	255	63M	*	0	0	*	*	XA:i:0	MD:Z:63	NM:i:0	UG:i:0	BX:Z:CGCCG
+SRR2057595.1043355_CGCCG	16	chr19	3486359	255	63M	*	0	0	*	*	XA:i:0	MD:Z:63	NM:i:0	UG:i:0	BX:Z:CGCCG
+SRR2057595.2024535_CGCCG	16	chr19	3486359	255	63M	*	0	0	*	*	XA:i:0	MD:Z:63	NM:i:0	UG:i:0	BX:Z:CGCCG
+SRR2057595.3828487_CGCCG	16	chr19	3486359	255	63M	*	0	0	*	*	XA:i:0	MD:Z:63	NM:i:0	UG:i:0	BX:Z:CGCCG
+```
+
+</div>
 
 ---
 layout: intro
 ---
 
-# Workflow managers
+# Workflow management systems
+
+
+---
+layout: text-window
+---
+
+# Workflow management systems
+
+- Scale analyses to a large number of samples
+- Allow for parallel processing
+- Agnostic of the compute infrastructure
+
+### A workflow (pipeline)
+
+- A sequence of interdependent processes
+- Outputs are consumed by other steps
+
+:: window ::
+
+```mermaid
+ graph TD 
+            A(STAR) -->|*.Aligned.out.bam| B
+            A -->|*.Aligned.toTranscriptome.out.bam| B
+            B(samtools sort - coordinate)
+            B -->|*.sorted.bam| C
+            B -->|*.transcriptome.sorted.bam| C
+            C(umi-tools dedup)
+            C -->|*.umi_dedup.sorted.bam| E
+            C -. *.umi_dedup.sorted.bam .-> D
+            C -->|*.umi_dedup.transcriptome.bam| D
+            C -->|*.umi_dedup.transcriptome.bam| P
+            D(samtools sort - name)
+            D -->|*.umi_dedup.transcriptome.sorted.bam| S
+            D -. *.umi_dedup.namesorted.bam .-> E
+            E(picard MarkDuplicates)
+            E -->|*.markdup.sorted.bam| F
+            F(featureCounts)
+            P(prepare-for-rsem.py)
+            P -->|*.umi_dedup.transcriptome.filtered.bam| R
+            R(RSEM)
+            S(salmon)   
+```
+
+
+---
+layout: text-window
+---
+
+# Example
+
+- One process
+- Input is a list of three greetings
+- The process is run for each input
+
+:: window ::
+
+```Groovy
+#!/usr/bin/env nextflow
+nextflow.enable.dsl=2 
+
+process sayHello {
+  input: 
+    val x
+  output:
+    stdout
+  script:
+    """
+    echo '$x world!'
+    """
+}
+
+workflow {
+  Channel.of('Bonjour', 
+             'Hej', 
+             'Hello') | sayHello | view
+}
+```
+
+
+---
+layout: new-section
+---
+
+# Workflow systems
+
+[Several hundred workflow systems exist](https://github.com/pditommaso/awesome-pipeline),
+but in bioinformatics it boils down to those: 
+
+<div class="grid grid-cols-2 gap-1 py-4">
+
+<div class="mx-auto my-auto">
+  <a href="https://snakemake.github.io">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Snakemake_logo_dark.png" class="rounded-full w-80 mx-auto my-auto"/>
+  </a>
+</div>
+<div class="mx-auto my-auto">
+  <a href="https://nextflow.io">
+   <img src="https://raw.githubusercontent.com/seqeralabs/logos/master/nextflow/nextflow_logo_color.svg" class="rounded-full w-80 mx-auto my-auto"/>
+  </a>
+</div>
+
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Domain-specific language (Pythonic)</p>
+</div>
+<div>
+  <p class="text-lg text-gray-500 font-semibold text-center">Domain-specific language (Groovy, Java)</p>
+</div>
+
+</div>
+
+Honorable mention: [Reflow](https://github.com/grailbio/reflow), [Workflow Description Language](https://software.broadinstitute.org/wdl/)
+
+
+---
+layout: new-section
+---
+
+# Test
 
