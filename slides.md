@@ -459,7 +459,7 @@ layout: text-window
 
 ### Pairwise alignment
 
-- Unique:  <span class="read">ng spirits brig</span><span class="read">ghing all the w</span>
+- Unique:  <span class="read">ng spirits brig</span>&nbsp;&nbsp;<span class="read">ghing all the w</span>
 - Multi-mapper: <span class="read">Jingle bel</span>
 - Base error: <span class="read">what pun it is</span>
 - Indels: <span class="read">Jingggge bls</span>
@@ -775,7 +775,7 @@ layout: new-section
  <h3>Batch-processing</h3>
   <ul>
     <li>Optimised for finite batches of data (one sequencing run)</li>
-    <li>Snakemake, Nextflow ...</li>
+    <li><emph>Snakemake, Nextflow ...</emph></li>
   </ul>
 </div>
 
@@ -783,7 +783,7 @@ layout: new-section
  <h3>Stream-processing</h3>
   <ul>
     <li>Optimised for a constant stream of data (sensors, stock prices)</li>
-    <li>Kafka, Red Panda, Rising Wave ...</li>
+    <li><emph>Kafka, Flink, Redpanda, RisingWave ...</emph></li>
   </ul>
 </div>
 </div>
@@ -803,7 +803,7 @@ layout: new-section
   <ul>
     <li>Isolated processes linked by dependencies (Directed acyclic graphs)</li>
     <li>Conceptually no dimension for <emph>time</emph></li>
-    <li>Snakemake, Nextflow ...</li>
+     <li><emph>Snakemake, Nextflow ...</emph></li>
   </ul>
 </div>
 
@@ -811,13 +811,13 @@ layout: new-section
  <h3>Imperative</h3>
   <ul>
     <li>Specify a sequence of steps explicitly</li>
-    <li>Airflow...</li>
+      <li><emph>Airflow, ...</emph></li>
   </ul>
- <h3>Data-asset lineages</h3>
+ <h3>Declarative data assets</h3>
   <ul>
     <li>Each output is the materialization of a task sequence.</li>
-    <li>Data assets are "aware" of their pedigree</li>
-    <li>Dagster...</li>
+    <li><a href="https://dagster.io/blog/declarative-scheduling">Data assets are "aware" of their pedigree</a></li>
+     <li><emph>Dagster...</emph></li>
   </ul>
 </div>
 </div>
