@@ -609,6 +609,41 @@ layout: new-section
 </div>
 Annotations (e.g. gene positions) aid the interpretation
 
+
+---
+layout: text-image
+media: '/assets/bio/cgv/humangenomeproject.png'
+caption: 'Covers from the 2001 draft sequence release'
+reverse: true
+---
+
+# Reference genomes
+
+### Linear reference genomes
+
+- Are versioned in major (GRCh38, hg38) and minor releases (GRCh38.p14)
+- [Come in different flavors](https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use)
+- Used for most applications.
+
+### T2T assemblies (Human: 2022)
+
+### Pangenomes (Human: 2023)
+  - [Combine multiple linear references in a graph representation](https://erictopol.substack.com/p/pearls-from-the-pangenome)
+
+
+---
+layout: new-section
+---
+
+# T2T vs. "regular" reference genome
+
+<div class="w-200 m-auto" style="justify-content: left; text-align: left;">
+  <a href="https://www.ncbi.nlm.nih.gov/genome/cgv/browse/GCF_009914755.1/GCF_000001405.40/23025/9606">
+  <img src="/assets/bio/cgv/chr8inv.svg" class="rounded-full w-200 mx-auto my-auto"/>
+  </a>
+</div>
+Long-reads filled gaps and revealed inversions
+
 ---
 layout: intro
 ---
