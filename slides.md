@@ -530,10 +530,84 @@ layout: new-section
 
 <div class="w-160 m-auto" style="justify-content: left; text-align: left;">
    <a href="https://github.com/kcleal/gw">
-  <img src="/assets/bio/gw/gwscreenshot2.png" class="rounded-full w-160 mx-auto my-auto"/>
+  <img src="/assets/bio/gw/gwscreenshot.png" class="rounded-full w-160 mx-auto my-auto"/>
   </a>
 </div>
 Agglomerated errors may represent individual variations (mind the ploidy)
+
+---
+layout: intro
+---
+
+# Exemplary analysis
+
+---
+layout: new-section
+---
+
+# ChIP-seq: Location of DNA-binding proteins
+
+<div class="w-200 m-auto" style="justify-content: left; text-align: left;">
+   <a href="https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu">
+  <img src="/assets/bio/chipseq1.png" class="rounded-full w-200 mx-auto my-auto"/>
+  <img src="/assets/bio/chipseq2.png" class="rounded-full w-200 mx-auto my-auto"/>
+  </a>
+</div>
+Annotations (e.g. gene positions) aid the interpretation
+
+---
+layout: intro
+---
+
+# ?
+
+---
+layout: text-image
+media: '/assets/bio/igvpeaks.png'
+reverse: true
+---
+
+# ChIP-seq analysis
+
+1. ### FastQ generation
+    - Basecalling
+    - De-multiplexing of samples
+2. ### Quality control
+3. ### Pairwise alignment
+4. ### Peak-calling
+    Discriminate true signal from false positives
+
+---
+layout: text-image
+media: '/assets/bio/motifs/helixloophelix.png'
+reverse: true
+---
+
+# ChIP-seq analysis
+
+5. ### Motif analysis
+
+<div class="rounded-md overflow-hidden" w="100%">
+  <img src="/assets/bio/motifs/ets1ets3.png" alt="Motifs for ETS1 and ET3 transcription factors" />
+</div>
+<a href="https://www.nature.com/articles/s41587-019-0315-8">(Somewhat outdated by now)</a>
+
+6. ### Create context from annotations
+    Find nearby genes or regulatory elements
+
+
+---
+layout: new-section
+---
+
+# Different methods result in different signals
+
+<div class="w-160 m-auto" style="justify-content: left; text-align: left;">
+   <a href="https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu">
+  <img src="/assets/bio/peaks.png" class="rounded-full w-160 mx-auto my-auto"/>
+  </a>
+</div>
+Annotations (e.g. gene positions) aid the interpretation
 
 ---
 layout: intro
