@@ -768,5 +768,56 @@ layout: new-section
 
 # Workflow "philosophies"
 
+<div class="w-200 mx-auto my-auto grid grid-cols-2 gap-1 py-4" style="justify-content: left; text-align: left;">
+
+<div>
+
+ <h3>Batch-processing</h3>
+  <ul>
+    <li>Optimised for finite batches of data (one sequencing run)</li>
+    <li>Snakemake, Nextflow ...</li>
+  </ul>
+</div>
+
+<div class="text-lg text-gray-300">
+ <h3>Stream-processing</h3>
+  <ul>
+    <li>Optimised for a constant stream of data (sensors, stock prices)</li>
+    <li>Kafka, Red Panda, Rising Wave ...</li>
+  </ul>
+</div>
+</div>
 
 
+---
+layout: new-section
+---
+
+# Workflow "philosophies"
+
+<div class="w-200 mx-auto my-auto grid grid-cols-2 gap-1 py-4" style="justify-content: left; text-align: left;">
+
+<div>
+
+ <h3>Dataflow model (inspired)</h3>
+  <ul>
+    <li>Isolated processes linked by dependencies (Directed acyclic graphs)</li>
+    <li>Conceptually no dimension for <emph>time</emph></li>
+    <li>Snakemake, Nextflow ...</li>
+  </ul>
+</div>
+
+<div class="text-lg text-gray-300">
+ <h3>Imperative</h3>
+  <ul>
+    <li>Specify a sequence of steps explicitly</li>
+    <li>Airflow...</li>
+  </ul>
+ <h3>Data-asset lineages</h3>
+  <ul>
+    <li>Each output is the materialization of a task sequence.</li>
+    <li>Data assets are "aware" of their pedigree</li>
+    <li>Dagster...</li>
+  </ul>
+</div>
+</div>
