@@ -32,7 +32,7 @@ layout: presenter
 presenterImage: '/assets/people/matthias.jpg'
 ---
 
-# Matthias Zepper
+<h1 class="headline">Matthias Zepper</h1>
 
 - Life and Medical Sciences in Bonn 🇩🇪
 - PhD in leukemia epigenetics in Münster 🇩🇪
@@ -366,7 +366,7 @@ F#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFF
 layout: two-cols-header
 ---
 
-# Quality control: Good sequencing quality
+<h1 class="headline">Quality control: Good sequencing quality</h1>
 
 ::left::
 
@@ -381,13 +381,11 @@ Base call quality is high along the full read
 
 The base composition is balanced
 
-
-
 ---
 layout: two-cols-header
 ---
 
-# Quality control: Poor sequencing quality
+<h1 class="headline">Quality control: Poor sequencing quality</h1>
 
 ::left::
 
